@@ -59,3 +59,10 @@ Other learning outcomes:
     - Write nice documentation for how to import and use our code
     - Use inheritance and importing to hide the code
     - Ultimately we can package it into a module that could be imported with PIP
+    
+    
+**Encapsulation**
+- Restricting access and making methods or attributes private 
+- In python things are by default public, to make it private you use double underscore __#
+- When a method or an attribute is private, it can only be accessed by it's own internal (in the class) methods. It cannot be called from the run file.
+     

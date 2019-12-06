@@ -10,7 +10,7 @@ class Animal () :
         self.alive = True
         self.number_eyes = eyes
         self.number_legs = legs
-        self.age = age
+        self.__age = age
         self.name = name
 
     # Define some behaviours - Methods:
@@ -21,6 +21,7 @@ class Animal () :
         return 'NOM NOM NOM! ' + food
 
     def mating(self):
+        self.__rejuvenate()     # Private method being called here
         return ' <3 '
 
     def mate_calling(self):
@@ -30,9 +31,20 @@ class Animal () :
         return 'HHUMMM!!! ... O_O ... -_- --- zen'
 
     def sleep(self):
+        self.__age += 1
         return ' Zzzzzzzz '
 
+    # This is a getter
+    def get_age(self):
+        return self.__age
 
+    # This is a Setter
+    def set_age(self, age):
+        self.__age = age
 
+    def __rejuvenate(self):
+        self.__age -= 1
 
+    def _display_members(self):
+        return f'Look at these fine claws and members :) I got {self.number_legs} of them'
 
